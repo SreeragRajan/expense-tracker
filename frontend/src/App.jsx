@@ -12,7 +12,6 @@ const App = () => {
   useEffect(() => {
     axios.get(url + "/api/transactions")
       .then((res) => {
-        // Assuming the API returns transactions sorted by date (newest first)
         const sortedTransactions = res.data.sort((a, b) => new Date(b.date) - new Date(a.date));
         setTransactions(sortedTransactions);
       })
