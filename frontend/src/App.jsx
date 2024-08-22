@@ -8,7 +8,7 @@ const App = () => {
   const [desc, setDesc] = useState("");
   const [transactions, setTransactions] = useState([]);
   
-  const url = "http://localhost:3000"
+  const url = "https://expense-tracker-backend-ghk4.onrender.com"
   useEffect(() => {
     axios.get(url + "/api/transactions")
       .then((res) => {
